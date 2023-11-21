@@ -3,38 +3,38 @@
 const teamArray = [{
     nome: "Wayne Barnett",
     posizione: "Founder & CEO",
-    foto: "wayne-barnett-founder-ceo.jpg"
+    foto: "img/wayne-barnett-founder-ceo.jpg"
 }, {
     nome: "Angela Caroll",
     posizione: "Chief Editor",
-    foto: "angela-caroll-chief-editor.jpg"
+    foto: "img/angela-caroll-chief-editor.jpg"
 }, {
     nome: "Walter Gordon",
     posizione: "Office Manager",
-    foto: "walter-gordon-office-manager.jpg"
+    foto: "img/walter-gordon-office-manager.jpg"
 }, {
     nome: "Angela Lopez",
     posizione: "Social Media Manager",
-    foto: "angela-lopez-social-media-manager.jpg"
+    foto: "img/angela-lopez-social-media-manager.jpg"
 }, {
     nome: "Scott Estrada",
     posizione: "Developer",
-    foto: "scott-estrada-developer.jpg"
+    foto: "img/scott-estrada-developer.jpg"
 }, {
     nome: "Barbara Ramos",
     posizione: "Graphic Designer",
-    foto: "barbara-ramos-graphic-designer.jpg"
+    foto: "img/barbara-ramos-graphic-designer.jpg"
 }]
 
 teamArray.forEach(membro => {
     console.log(`Nome: ${membro.nome}, Ruolo: ${membro.posizione}, Foto: ${membro.foto}`);
 });
 
-const teamContainer = document.getElementById('team-container'); // Assumi che esista un elemento con id 'team-container' nel tuo HTML
+const teamContainer = document.getElementById('team-container');
 
 teamArray.forEach(membro => {
     const memberInfo = document.createElement('div');
-    memberInfo.innerHTML = `<p>Nome: ${membro.nome}</p><p>Ruolo: ${membro.posizione}</p><p>Foto: ${membro.foto}</p>`;
+    memberInfo.innerHTML = `<img src="${membro.foto}" alt="${membro.nome}"><h3>${membro.nome}</h3><p>${membro.posizione}</p>`;
     teamContainer.appendChild(memberInfo);
 });
 
